@@ -12,3 +12,29 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// Варіант 1. Шаблонні рядки.
+
+const gallaryRef = document.querySelector('.gallery');
+const markup = images.map(({url, alt}) => `<li><img src="${url}" alt="${alt}" width="360"></li>`).join('');
+gallaryRef.insertAdjacentHTML('beforeend', markup);
+console.log(markup)
+
+
+// Варіант 2. createElement.
+
+// const gallaryRef = document.querySelector('.gallery');
+
+// let markup = [];
+
+// for(let i = 0; i < images.length; i += 1){
+//   const li = document.createElement('li');
+//   const img = document.createElement('img');
+//   img.src = images[i].url;
+//   img.alt = images[i].alt;
+//   img.width = 300;
+//   li.append(img);
+//   markup.push(li);
+// }
+// gallaryRef.append(...markup);
+// console.log(gallaryRef)
