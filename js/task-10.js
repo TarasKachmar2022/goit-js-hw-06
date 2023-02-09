@@ -39,5 +39,5 @@ function onCreateBtnClick(){
 }
 
 function destroyBoxes(){
-  refs.boxesRef.remove();
+  refs.boxesRef.innerHTML = '';
 }
